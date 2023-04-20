@@ -1,69 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== */
+/* Custom properties */
+/* ================== */
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --ff-main: 'Ubuntu', sans-serif;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* --fw-light: 300; */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  /* --fw-semi-bold: 600; */
+  --fw-bold: 700;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+  --fs-07: 0.438rem;
+  --fs-08: 0.5em;
+  --fs-09: 0.563em;
+  --fs-10: 0.625rem;
+  --fs-11: 0.688em;
+  --fs-12: 0.75rem;
+  --fs-13: 0.813rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-30: 1.875em;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-56: 3.5rem;
+  --fs-60: 3.75rem;
+  --fs-64: 4rem;
+  --fs-72: 4.5rem;
+  --fs-80: 5rem;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  /* Text */
+  --clr-white-text: hsla(0, 0%, 100%, 1);
+  --clr-denim-text: hsla(213, 96%, 18%, 1);
+  --clr-grey-text: hsla(231, 11%, 63%, 1);
+
+  /* Background  */
+  --clr-white-bg: hsla(0, 0%, 100%, 1);
+  --clr-alabaster-bg: hsl(231, 100%, 99%);
+  --clr-magnolia-bg: hsl(217, 100%, 97%);
+  --clr-light-gray-bg: hsl(229, 24%, 87%);
+
+  /* Others */
+  --clr-purplish-blue-bg: hsl(243, 100%, 62%);
+  --clr-pastel-blue-bg: hsl(228, 100%, 84%);
+  --clr-light-blue-bg: hsl(206, 94%, 87%);
+  --clr-strawberry-red-bg: hsl(354, 84%, 57%);
+  --clr-black-bg: hsla(0, 0%, 0%, 1);
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: var(--clr-magnolia-bg);
+
+  color: var(--clr-grey-grey-text);
+  font-family: var(--ff-main);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-regular);
+  line-height: 1.5625;
+  text-align: left;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+ul {
+  list-style: none;
 }
