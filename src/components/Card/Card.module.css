@@ -1,4 +1,3 @@
-.Container {
+.Card {
   background: var(--clr-white-bg);
-  height: 100vh;
 }

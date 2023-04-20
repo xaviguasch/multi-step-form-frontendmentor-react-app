@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
 
+import classes from './Container.module.css'
+
+import Card from '../Card/Card'
+
 const Container = () => {
   const [currPage, setCurrPage] = useState(1)
 
-  return <div>Container</div>
+  return (
+    <div className={classes.Container}>
+      <h1>Container</h1>
+      <Card />
+    </div>
+  )
 }
 
 export default Container

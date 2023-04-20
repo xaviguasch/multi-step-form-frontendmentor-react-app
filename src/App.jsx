@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import './App.css'
+
+import classes from './App.module.css'
 
 import Container from './components/Container/Container'
 
 function App() {
   return (
-    <div className='App'>
+    <div className={classes.App}>
       <Container />
     </div>
   )
