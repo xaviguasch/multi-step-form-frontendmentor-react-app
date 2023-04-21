@@ -1,0 +1,7 @@
+.NavigationBtns {
+  background: var(--clr-white-bg);
+
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

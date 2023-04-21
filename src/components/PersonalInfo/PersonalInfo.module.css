@@ -1,0 +1,11 @@
+.PersonalInfo {
+  composes: flex--col--fs-fs from '../../assets/global.css';
+  gap: 22px;
+}
+
+.form {
+  composes: flex--col--fs-stretch from '../../assets/global.css';
+
+  gap: 16px;
+  width: 100%;
+}

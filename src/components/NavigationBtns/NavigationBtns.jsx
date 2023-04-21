@@ -1,7 +1,9 @@
 import React from 'react'
 
+import classes from './NavigationBtns.module.css'
+
 const NavigationBtns = () => {
-  return <div>NavigationBtns</div>
+  return <div className={classes.NavigationBtns}>NavigationBtns</div>
 }
 
 export default NavigationBtns
