@@ -11,9 +11,8 @@ const Container = () => {
 
   return (
     <div className={classes.Container}>
-      <h1>Container</h1>
-      <Card />
       <StepsArea />
+      <Card />
       <NavigationBtns />
     </div>
   )
