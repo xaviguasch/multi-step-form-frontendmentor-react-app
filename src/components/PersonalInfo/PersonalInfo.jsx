@@ -15,21 +15,36 @@ const PersonalInfo = () => {
           <label className='input-label' htmlFor='name'>
             Name
           </label>
-          <input className='input-strd' type='text' id='name' />
+          <input
+            className='input-strd'
+            type='text'
+            id='name'
+            placeholder='e.g. Stephen King'
+          />
         </div>
 
         <div className='inputGroup'>
           <label className='input-label' htmlFor='email'>
             Email Address
           </label>
-          <input className='input-strd' type='email' id='email' />
+          <input
+            className='input-strd'
+            type='email'
+            id='email'
+            placeholder='e.g. stephenking@lorem.com'
+          />
         </div>
 
         <div className='inputGroup'>
           <label className='input-label' htmlFor='phone'>
             Phone Number
           </label>
-          <input className='input-strd' type='number' id='phone' />
+          <input
+            className='input-strd'
+            type='number'
+            id='phone'
+            placeholder='e.g. +1 234 567 890'
+          />
         </div>
       </form>
     </div>

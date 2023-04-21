@@ -2,3 +2,7 @@
   background: var(--clr-magnolia-bg);
   height: 100vh;
 }
+
+.cardContainer {
+  margin-top: -73px;
+}

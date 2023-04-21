@@ -12,7 +12,9 @@ const Container = () => {
   return (
     <div className={classes.Container}>
       <StepsArea />
-      <Card />
+      <div className={classes.cardContainer}>
+        <Card />
+      </div>
       <NavigationBtns />
     </div>
   )

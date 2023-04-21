@@ -69,7 +69,7 @@
   /* Background  */
   --clr-white-bg: hsla(0, 0%, 100%, 1);
   --clr-alabaster-bg: hsl(231, 100%, 99%);
-  --clr-magnolia-bg: hsl(217, 100%, 97%);
+  --clr-magnolia-bg: hsl(216, 100%, 97%);
   --clr-light-gray-bg: hsl(229, 24%, 87%);
 
   /* Others */
@@ -79,6 +79,8 @@
   --clr-strawberry-red-bg: hsl(354, 84%, 57%);
   --clr-black-bg: hsla(0, 0%, 0%, 1);
   --clr-border-input: hsla(231, 23%, 87%, 1);
+
+  --clr-shadow-color: 216deg 28% 73%;
 }
 
 body {

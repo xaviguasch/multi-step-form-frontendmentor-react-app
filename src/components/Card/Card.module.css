@@ -4,6 +4,9 @@
   margin: 0 16px;
 
   border-radius: 10px;
+
+  box-shadow: 0px 0.6px 0.8px hsl(var(--clr-shadow-color) / 0.15),
+    -0.6px 9.4px 13px -0.8px hsl(var(--clr-shadow-color) / 0.45);
 }
 
 /* composes: blueClass from '../../index.css'; */
