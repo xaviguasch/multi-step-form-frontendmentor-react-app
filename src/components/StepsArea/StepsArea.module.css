@@ -4,4 +4,31 @@
   background-size: cover;
 
   height: 172px;
+
+  padding-top: 32px;
+}
+
+.stepsList {
+  composes: flex--row--sb-c from '../../assets/global.css';
+
+  gap: 16px;
+}
+
+.stepGroup {
+  display: none;
+}
+
+.number {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-14);
+  color: var(--clr-white-bg);
+  padding: 8px 12px;
+  border: 1px solid var(--clr-white-bg);
+  border-radius: 50%;
+}
+
+.numSelected {
+  background-color: var(--clr-light-blue-bg);
+  color: var(--clr-denim-text);
+  border: 1px solid var(--clr-light-blue-bg);
 }

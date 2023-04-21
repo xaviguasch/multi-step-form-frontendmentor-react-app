@@ -12,6 +12,13 @@
   align-items: stretch;
 }
 
+.flex--row--sb-c {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 /* .redTest {
   color: red;
 } */
