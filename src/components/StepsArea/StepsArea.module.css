@@ -9,7 +9,7 @@
 }
 
 .stepsList {
-  composes: flex--row--sb-c from '../../assets/global.css';
+  composes: flex--row--c-c from '../../assets/global.css';
 
   gap: 16px;
 }
