@@ -9,8 +9,8 @@ import ThankYou from '../ThankYou/ThankYou'
 const Card = () => {
   return (
     <div className={classes.Card}>
-      {/* <PersonalInfo /> */}
-      <ThankYou />
+      <PersonalInfo />
+      {/* <ThankYou /> */}
     </div>
   )
 }
