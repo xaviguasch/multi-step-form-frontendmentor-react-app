@@ -9,13 +9,22 @@ import NavigationBtns from '../NavigationBtns/NavigationBtns'
 const Container = () => {
   // const [currPage, setCurrPage] = useState(1)
 
+  const sendDataAndMoveHandler = (data) => {
+    console.log('moving forward')
+  }
+
+  const moveBackHandler = () => {}
+
   return (
     <div className={classes.Container}>
       <StepsArea />
       <div className={classes.cardContainer}>
         <Card />
       </div>
-      <NavigationBtns />
+      <NavigationBtns
+        onSendDataAndMove={sendDataAndMoveHandler}
+        onMoveBack={moveBackHandler}
+      />
     </div>
   )
 }

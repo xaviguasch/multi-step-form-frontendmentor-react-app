@@ -5,6 +5,8 @@
   border: 1px solid var(--clr-denim-bg);
   border-radius: 4px;
   padding: 12px 16px;
+
+  cursor: pointer;
 }
 
 .nextStep {
@@ -18,4 +20,10 @@
   background: transparent;
   border: none;
   padding: 0;
+}
+
+.confirm {
+  color: var(--clr-white-text);
+  background: var(--clr-purplish-blue-bg);
+  border: 1px solid var(--clr-purplish-blue-bg);
 }

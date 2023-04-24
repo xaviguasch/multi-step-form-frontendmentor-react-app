@@ -4,7 +4,7 @@ import classes from './NavigationBtns.module.css'
 
 import Button from '../Button/Button'
 
-const NavigationBtns = () => {
+const NavigationBtns = ({ onSendDataAndMove, onMoveBack }) => {
   return (
     <div className={classes.NavigationBtns}>
       <div className={classes.buttonsArea}>
