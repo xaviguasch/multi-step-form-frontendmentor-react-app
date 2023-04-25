@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react'
 export const MultiContext = createContext()
 
 function MultiProvider({ children }) {
-  const [currPage, setCurrPage] = useState('14')
+  const [currPage, setCurrPage] = useState(1)
 
   let currPageState = {
     currPage,

@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './Button.module.css'
 
-const Button = ({ text, type = 'nextStep' }) => {
+const Button = ({ text, type = 'nextStep', onGoForward, onGoBack }) => {
   let typeClass
 
   if (type === 'nextStep') {
@@ -14,7 +14,11 @@ const Button = ({ text, type = 'nextStep' }) => {
   }
 
   const btnClickHandler = () => {
-    console.log('from the click')
+    if (type === 'nextStep') {
+      onGoForward()
+    } else if (type === 'prevStep') {
+      onGoBack()
+    }
   }
 
   return (

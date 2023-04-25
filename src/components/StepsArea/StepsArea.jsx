@@ -4,8 +4,6 @@ import classes from './StepsArea.module.css'
 import { MultiContext } from '../../context/MultiProvider'
 
 const StepsArea = () => {
-  // const { currPage, setCurrPage } = useContext(MultiContext)
-
   return (
     <div className={classes.StepsArea}>
       <ul className={classes.stepsList}>
