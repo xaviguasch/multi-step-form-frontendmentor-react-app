@@ -5,11 +5,11 @@ import classes from './PersonalInfo.module.css'
 import { MultiContext } from '../../context/MultiProvider'
 
 const PersonalInfo = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phoneNumber, setPhoneNumber] = useState('')
+  const { personalInfoData, setPersonalInfoData } = useContext(MultiContext)
 
-  const { setPersonalInfoData } = useContext(MultiContext)
+  const [name, setName] = useState(personalInfoData.name || '')
+  const [email, setEmail] = useState(personalInfoData.email || '')
+  const [phoneNumber, setPhoneNumber] = useState(personalInfoData.phoneNumber || '')
 
   useEffect(() => {
     setPersonalInfoData({
