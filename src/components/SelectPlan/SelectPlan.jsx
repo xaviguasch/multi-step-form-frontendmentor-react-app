@@ -6,10 +6,12 @@ import { MultiContext } from '../../context/MultiProvider'
 import PLANS from '../../utils/utils'
 
 const SelectPlan = () => {
-  const [plan, setPlan] = useState('arcade')
-  const [monthlyOrYearly, setMonthlyOrYearly] = useState('monthly')
+  const { planData, setPlanData } = useContext(MultiContext)
 
-  const { setPlanData } = useContext(MultiContext)
+  const [plan, setPlan] = useState(planData.plan || 'arcade')
+  const [monthlyOrYearly, setMonthlyOrYearly] = useState(
+    planData.monthlyOrYearly || 'monthly'
+  )
 
   useEffect(() => {
     setPlanData({

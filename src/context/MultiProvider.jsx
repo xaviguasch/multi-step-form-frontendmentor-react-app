@@ -12,7 +12,7 @@ function MultiProvider({ children }) {
   const [addOns, setAddOns] = useState({
     online: false,
     larger: false,
-    customi: false,
+    custom: false,
   })
 
   let globalState = {
