@@ -1,9 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import classes from './SelectPlan.module.css'
+
+import { MultiContext } from '../../context/MultiProvider'
+
+import PLANS from '../../utils/utils'
 
 const SelectPlan = () => {
   const [plan, setPlan] = useState('arcade')
   const [monthlyOrYearly, setMonthlyOrYearly] = useState('monthly')
+
+  const { setPlanData } = useContext(MultiContext)
+
+  useEffect(() => {
+    setPlanData({
+      plan,
+      monthlyOrYearly,
+    })
+  }, [plan, monthlyOrYearly])
 
   return (
     <div className={classes.SelectPlan}>
@@ -24,7 +37,11 @@ const SelectPlan = () => {
               setPlan(e.target.value)
             }}
           />
-          <label htmlFor='arcade'>Arcade</label>
+          <label htmlFor='arcade'>
+            <span>{PLANS.arcade.name}</span>
+            <span>{monthlyOrYearly === 'monthly' ? '$9/mo' : '$90/yr'}</span>
+            {monthlyOrYearly === 'yearly' && <span>2 months free</span>}
+          </label>
           <br />
 
           <input
@@ -37,7 +54,11 @@ const SelectPlan = () => {
               setPlan(e.target.value)
             }}
           />
-          <label htmlFor='advanced'>Advanced</label>
+          <label htmlFor='advanced'>
+            <span>{PLANS.advanced.name}</span>
+            <span>{monthlyOrYearly === 'monthly' ? '$12/mo' : '$120/yr'}</span>
+            {monthlyOrYearly === 'yearly' && <span>2 months free</span>}
+          </label>
           <br />
 
           <input
@@ -50,7 +71,11 @@ const SelectPlan = () => {
               setPlan(e.target.value)
             }}
           />
-          <label htmlFor='pro'>Pro</label>
+          <label htmlFor='pro'>
+            <span>{PLANS.pro.name}</span>
+            <span>{monthlyOrYearly === 'monthly' ? '$15/mo' : '$150/yr'}</span>
+            {monthlyOrYearly === 'yearly' && <span>2 months free</span>}
+          </label>
         </fieldset>
 
         <div>

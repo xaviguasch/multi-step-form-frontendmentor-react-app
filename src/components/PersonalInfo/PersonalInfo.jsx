@@ -12,14 +12,11 @@ const PersonalInfo = () => {
   const { setPersonalInfoData } = useContext(MultiContext)
 
   useEffect(() => {
-    // It sends the form data whenever the component gets unmounted
-    return () => {
-      setPersonalInfoData({
-        name,
-        email,
-        phoneNumber,
-      })
-    }
+    setPersonalInfoData({
+      name,
+      email,
+      phoneNumber,
+    })
   }, [name, email, phoneNumber])
 
   return (
