@@ -24,12 +24,7 @@ const Card = () => {
     currentCard = <FinishingUp />
   }
 
-  return (
-    <div className={classes.Card}>
-      {/* <ThankYou /> */}
-      {currentCard}
-    </div>
-  )
+  return <div className={classes.Card}>{currentCard}</div>
 }
 
 export default Card

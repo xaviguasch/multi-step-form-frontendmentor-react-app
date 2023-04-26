@@ -5,12 +5,15 @@ export const MultiContext = createContext()
 function MultiProvider({ children }) {
   const [currPage, setCurrPage] = useState(1)
 
-  let currPageState = {
+  const [personalInfoData, setPersonalInfoData] = useState({})
+
+  let globalState = {
     currPage,
     setCurrPage,
+    setPersonalInfoData,
   }
 
-  return <MultiContext.Provider value={currPageState}>{children}</MultiContext.Provider>
+  return <MultiContext.Provider value={globalState}>{children}</MultiContext.Provider>
 }
 
 export default MultiProvider
