@@ -6,7 +6,7 @@ import Button from '../Button/Button'
 
 import { MultiContext } from '../../context/MultiProvider'
 
-const NavigationBtns = ({ onSendDataAndMove, onMoveBack }) => {
+const NavigationBtns = () => {
   const { currPage, setCurrPage } = useContext(MultiContext)
 
   const goForwardHandler = () => {
