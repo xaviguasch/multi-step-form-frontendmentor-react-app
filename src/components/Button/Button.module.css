@@ -13,6 +13,7 @@
   color: var(--clr-white-text);
   background: var(--clr-denim-bg);
   border: 1px solid var(--clr-denim-bg);
+  margin-left: auto;
 }
 
 .prevStep {
