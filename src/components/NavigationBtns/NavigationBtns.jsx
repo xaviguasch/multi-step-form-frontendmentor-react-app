@@ -21,7 +21,6 @@ const NavigationBtns = ({ onSendDataAndMove, onMoveBack }) => {
 
   return (
     <div className={classes.NavigationBtns}>
-      {currPage}
       <div className={classes.buttonsArea}>
         {currPage > 1 && (
           <Button
