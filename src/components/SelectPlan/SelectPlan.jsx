@@ -3,7 +3,7 @@ import classes from './SelectPlan.module.css'
 
 import { MultiContext } from '../../context/MultiProvider'
 
-import PLANS from '../../utils/utils'
+import { PLANS } from '../../utils/utils'
 
 const SelectPlan = () => {
   const { planData, setPlanData } = useContext(MultiContext)

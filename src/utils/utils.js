@@ -22,4 +22,22 @@ const PLANS = {
   },
 }
 
-export default PLANS
+const ADDONS_PRICES = {
+  onlineService: {
+    name: 'Online service',
+    mo: 1,
+    yr: 10,
+  },
+  largerStorage: {
+    name: 'Larger storage',
+    mo: 2,
+    yr: 20,
+  },
+  customizableProfile: {
+    name: 'Customizable profile',
+    mo: 2,
+    yr: 10,
+  },
+}
+
+export { PLANS, ADDONS_PRICES }

@@ -6,13 +6,16 @@ import { MultiContext } from '../../context/MultiProvider'
 const PickAddOns = () => {
   const { addOnsGlobal, setAddOnsGlobal } = useContext(MultiContext)
 
-  const [addOns, setAddOns] = React.useState(addOnsGlobal || {})
+  console.log(addOnsGlobal)
 
-  const addOnsList = Object.keys(addOns)
+  // Is this state redundant????? Test if we could get rid of the internal addOns state
+  const [addOns, setAddOns] = React.useState(addOnsGlobal)
+
+  const addOnsList = Object.keys(addOnsGlobal)
 
   useEffect(() => {
     setAddOnsGlobal({
-      addOns,
+      ...addOns,
     })
   }, [addOns])
 

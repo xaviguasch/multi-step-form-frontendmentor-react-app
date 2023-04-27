@@ -4,9 +4,6 @@ export const MultiContext = createContext()
 
 function MultiProvider({ children }) {
   const [currPage, setCurrPage] = useState(1)
-
-  // Initialize all states here, PENDING
-
   const [personalInfoData, setPersonalInfoData] = useState({})
   const [planData, setPlanData] = useState({})
   const [addOnsGlobal, setAddOnsGlobal] = useState({
