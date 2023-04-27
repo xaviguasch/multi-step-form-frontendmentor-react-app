@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import classes from './PickAddOns.module.css'
 
-const initialAddOns = {
-  onlineService: false,
-  largerStorage: false,
-  customizableProfile: false,
-}
+import { MultiContext } from '../../context/MultiProvider'
 
 const PickAddOns = () => {
-  // needs to get props specifying if the subscription is yearly or monthly
-  const [addOns, setAddOns] = React.useState(initialAddOns)
+  const { addOnsGlobal, setAddOnsGlobal } = useContext(MultiContext)
 
-  const addOnsList = Object.keys(initialAddOns)
+  const [addOns, setAddOns] = React.useState(addOnsGlobal || {})
+
+  const addOnsList = Object.keys(addOns)
+
+  useEffect(() => {
+    setAddOnsGlobal({
+      addOns,
+    })
+  }, [addOns])
 
   return (
     <div className={classes.PickAddOns}>

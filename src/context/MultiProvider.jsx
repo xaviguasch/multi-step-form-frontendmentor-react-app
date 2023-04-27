@@ -9,10 +9,10 @@ function MultiProvider({ children }) {
 
   const [personalInfoData, setPersonalInfoData] = useState({})
   const [planData, setPlanData] = useState({})
-  const [addOns, setAddOns] = useState({
-    online: false,
-    larger: false,
-    custom: false,
+  const [addOnsGlobal, setAddOnsGlobal] = useState({
+    onlineService: false,
+    largerStorage: false,
+    customizableProfile: false,
   })
 
   let globalState = {
@@ -22,8 +22,8 @@ function MultiProvider({ children }) {
     setPersonalInfoData,
     planData,
     setPlanData,
-    addOns,
-    setAddOns,
+    addOnsGlobal,
+    setAddOnsGlobal,
   }
 
   return <MultiContext.Provider value={globalState}>{children}</MultiContext.Provider>
