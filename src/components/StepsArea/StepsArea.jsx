@@ -52,7 +52,9 @@ const StepsArea = () => {
         <li>
           <div className={classes.stepItem}>
             <span
-              className={`${classes.number} ${currPage === 4 && classes.numSelected}`}
+              className={`${classes.number} ${
+                (currPage === 4 || currPage === 5) && classes.numSelected
+              }`}
             >
               4
             </span>{' '}

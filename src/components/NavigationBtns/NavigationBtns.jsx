@@ -10,7 +10,7 @@ const NavigationBtns = () => {
   const { currPage, setCurrPage } = useContext(MultiContext)
 
   const goForwardHandler = () => {
-    if (currPage < 4) {
+    if (currPage < 5) {
       setCurrPage((prevPage) => prevPage + 1)
     }
   }
@@ -19,10 +19,14 @@ const NavigationBtns = () => {
     setCurrPage((prevPage) => prevPage - 1)
   }
 
+  if (currPage === 5) {
+    return null
+  }
+
   return (
     <div className={classes.NavigationBtns}>
       <div className={classes.buttonsArea}>
-        {currPage > 1 && (
+        {currPage > 1 && currPage < 5 && (
           <Button
             onGoBack={goBackHandler}
             text='Go Back'
@@ -30,12 +34,24 @@ const NavigationBtns = () => {
             currPage={currPage}
           />
         )}
-        <Button
-          onGoForward={goForwardHandler}
-          text='Next Step'
-          type='nextStep'
-          currPage={currPage}
-        />
+
+        {currPage >= 1 && currPage < 4 && (
+          <Button
+            onGoForward={goForwardHandler}
+            text='Next Step'
+            type='nextStep'
+            currPage={currPage}
+          />
+        )}
+
+        {currPage === 4 && (
+          <Button
+            onGoForward={goForwardHandler}
+            text='Confirm'
+            type='nextStep'
+            currPage={currPage}
+          />
+        )}
       </div>
     </div>
   )

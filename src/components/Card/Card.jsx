@@ -22,6 +22,8 @@ const Card = () => {
     currentCard = <PickAddOns />
   } else if (currPage === 4) {
     currentCard = <FinishingUp />
+  } else if (currPage === 5) {
+    currentCard = <ThankYou />
   }
 
   return <div className={classes.Card}>{currentCard}</div>
