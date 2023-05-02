@@ -1,0 +1,49 @@
+.PickAddOns {
+  composes: flex--col--fs-fs from '../../assets/global.css';
+  gap: 22px;
+}
+
+.form {
+  composes: flex--col--fs-fs from '../../assets/global.css';
+  gap: 12px;
+
+  width: 100%;
+}
+
+.addOns {
+  width: 100%;
+  border: solid 1px var(--clr-light-gray-bg);
+  border-radius: 8px;
+  padding: 11px 16px;
+  cursor: pointer;
+}
+
+.addOns:hover,
+.addOns:active {
+  border: solid 1px var(--clr-purplish-blue-bg);
+}
+.labelAddOn {
+  cursor: pointer;
+}
+
+.addOnGroup {
+  composes: flex--row--sb-c from '../../assets/global.css';
+}
+
+.activeAddOnGroup {
+  background: var(--clr-alabaster-bg);
+  border: solid 1px var(--clr-purplish-blue-bg);
+}
+
+.leftAddOn {
+  composes: flex--row--fs-c from '../../assets/global.css';
+  gap: 16px;
+}
+
+.addOnInfo {
+  composes: flex--col--fs-fs from '../../assets/global.css';
+}
+
+.customCheckbox {
+  transform: scale(1.6);
+}

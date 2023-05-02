@@ -3,13 +3,22 @@ import classes from './PickAddOns.module.css'
 
 import { MultiContext } from '../../context/MultiProvider'
 
+import { PLANS, ADDONS_PRICES } from '../../utils/utils'
+
 const PickAddOns = () => {
-  const { addOnsGlobal, setAddOnsGlobal } = useContext(MultiContext)
+  const { addOnsGlobal, setAddOnsGlobal, planData } = useContext(MultiContext)
 
   console.log(addOnsGlobal)
 
   // Is this state redundant????? Test if we could get rid of the internal addOns state
   const [addOns, setAddOns] = React.useState(addOnsGlobal)
+
+  let typeOfPlan = ''
+  if (planData.monthlyOrYearly === 'monthly') {
+    typeOfPlan = 'mo'
+  } else {
+    typeOfPlan = 'yr'
+  }
 
   const addOnsList = Object.keys(addOnsGlobal)
 
@@ -27,27 +36,43 @@ const PickAddOns = () => {
       </div>
 
       <form className={classes.form}>
-        <fieldset>
-          <legend>Select toppings:</legend>
-
-          {addOnsList.map((option) => (
-            <div key={option}>
-              <input
-                type='checkbox'
-                id={option}
-                value={option}
-                checked={addOns[option] === true}
-                onChange={(event) => {
-                  setAddOns({
-                    ...addOns,
-                    [option]: event.target.checked,
-                  })
-                }}
-              />
-              <label htmlFor={option}>{option}</label>
-            </div>
-          ))}
-        </fieldset>
+        {addOnsList.map((option) => (
+          <div
+            key={option}
+            className={`${classes.addOns} ${
+              addOns[option] === true && classes.activeAddOnGroup
+            }`}
+          >
+            <label htmlFor={option} className={classes.labelAddOn}>
+              <div className={classes.addOnGroup}>
+                <div className={classes.leftAddOn}>
+                  <input
+                    type='checkbox'
+                    className={classes.customCheckbox}
+                    id={option}
+                    value={option}
+                    checked={addOns[option] === true}
+                    onChange={(event) => {
+                      setAddOns({
+                        ...addOns,
+                        [option]: event.target.checked,
+                      })
+                    }}
+                  />
+                  <div className={classes.addOnInfo}>
+                    <span className='text-item-add'>{ADDONS_PRICES[option].name}</span>
+                    <span className='text-sub-sub-item-add'>
+                      {ADDONS_PRICES[option].copy}
+                    </span>
+                  </div>
+                </div>
+                <span className='text-sub-sub-item-price'>
+                  ${ADDONS_PRICES[option][typeOfPlan]}/{typeOfPlan}
+                </span>
+              </div>
+            </label>
+          </div>
+        ))}
       </form>
     </div>
   )

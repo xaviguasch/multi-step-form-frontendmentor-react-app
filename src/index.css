@@ -123,6 +123,12 @@ ul {
   font-weight: var(--fw-bold);
 }
 
+.text-item-add {
+  font-size: var(--fs-14);
+  color: var(--clr-denim-text);
+  font-weight: var(--fw-bold);
+}
+
 .text-sub-item {
   font-size: var(--fs-14);
   color: var(--clr-grey-text);
@@ -131,6 +137,15 @@ ul {
 .text-sub-sub-item {
   font-size: var(--fs-12);
   color: var(--clr-denim-text);
+}
+
+.text-sub-sub-item-add {
+  font-size: var(--fs-12);
+  color: var(--clr-grey-text);
+}
+.text-sub-sub-item-price {
+  font-size: var(--fs-12);
+  color: var(--clr-purplish-blue-bg);
 }
 
 .input-label {

@@ -25,16 +25,19 @@ const PLANS = {
 const ADDONS_PRICES = {
   onlineService: {
     name: 'Online service',
+    copy: 'Access to multiplayer games',
     mo: 1,
     yr: 10,
   },
   largerStorage: {
     name: 'Larger storage',
+    copy: 'Extra 1TB of cloud save',
     mo: 2,
     yr: 20,
   },
   customizableProfile: {
     name: 'Customizable profile',
+    copy: 'Custom theme on your profile',
     mo: 2,
     yr: 10,
   },
