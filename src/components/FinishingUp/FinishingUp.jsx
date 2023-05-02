@@ -44,24 +44,28 @@ const FinishingUp = () => {
         <div className={classes.items}>
           <div className={classes.item}>
             <div className={classes.itemPair}>
-              <span>
-                {planData.plan} ({planData.monthlyOrYearly})
+              <span className='text-item-add'>
+                {planData.plan[0].toUpperCase() + planData.plan.slice(1)} (
+                {planData.monthlyOrYearly})
               </span>
-              <span onClick={() => setCurrPage(2)}>Change</span>
+              <span className={classes.changeBtn} onClick={() => setCurrPage(2)}>
+                Change
+              </span>
             </div>
-            <span>
+            <span className='text-item-add'>
               ${currPrice}/{typeOfPlan}
             </span>
           </div>
-          <br />
+
+          <hr className={classes.hrLine} />
 
           {selectedAddOns.map((sel) => {
             return (
               <div key={sel} className={classes.item}>
                 <div className={classes.itemInd}>
-                  <span>{ADDONS_PRICES[sel].name}</span>
+                  <span className='text-sub-item'>{ADDONS_PRICES[sel].name}</span>
                 </div>
-                <span>
+                <span className='text-item-num'>
                   ${ADDONS_PRICES[sel][typeOfPlan]}/{typeOfPlan}
                 </span>
               </div>
@@ -72,9 +76,9 @@ const FinishingUp = () => {
         <div className={classes.total}>
           <div className={classes.item}>
             <div className={classes.itemInd}>
-              <span>Total (per month)</span>
+              <span className='text-sub-item'>Total (per month)</span>
             </div>
-            <span>
+            <span className='text-item-total'>
               +${finalTotal}/{typeOfPlan}
             </span>
           </div>

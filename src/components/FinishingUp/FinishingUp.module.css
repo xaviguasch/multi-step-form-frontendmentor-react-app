@@ -1,0 +1,38 @@
+.FinishingUp {
+  composes: flex--col--fs-fs from '../../assets/global.css';
+  gap: 22px;
+}
+
+.cartItems {
+  width: 100%;
+
+  composes: flex--col--fs-stretch from '../../assets/global.css';
+  gap: 24px;
+}
+
+.items {
+  background: var(--clr-alabaster-bg);
+  width: 100%;
+
+  padding: 18px 16px 16px;
+
+  composes: flex--col--fs-stretch from '../../assets/global.css';
+  gap: 12px;
+}
+
+.item {
+  composes: flex--row--sb-c from '../../assets/global.css';
+}
+
+.itemPair {
+  composes: flex--col--fs-fs from '../../assets/global.css';
+}
+
+.changeBtn {
+  font-size: var(--fs-14);
+  border-bottom: 1px solid;
+}
+
+.hrLine {
+  border-top: 1px solid var(--clr-grey-hr);
+}

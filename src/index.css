@@ -80,6 +80,7 @@
   --clr-strawberry-red-bg: hsl(354, 84%, 57%);
   --clr-black-bg: hsla(0, 0%, 0%, 1);
   --clr-border-input: hsla(231, 23%, 87%, 1);
+  --clr-grey-hr: hsla(231, 11%, 63%, 0.2);
 
   --clr-shadow-color: 216deg 28% 73%;
 }
@@ -123,10 +124,21 @@ ul {
   font-weight: var(--fw-bold);
 }
 
+.text-item-total {
+  font-size: var(--fs-16);
+  color: var(--clr-purplish-blue-bg);
+  font-weight: var(--fw-bold);
+}
+
 .text-item-add {
   font-size: var(--fs-14);
   color: var(--clr-denim-text);
   font-weight: var(--fw-bold);
+}
+
+.text-item-num {
+  font-size: var(--fs-14);
+  color: var(--clr-denim-text);
 }
 
 .text-sub-item {
