@@ -1,5 +1,31 @@
 .SelectPlan {
+  composes: flex--col--fs-fs from '../../assets/global.css';
+  gap: 22px;
 }
 
 .form {
+  width: 100%;
+
+  composes: flex--col--fs-stretch from '../../assets/global.css';
+  gap: 24px;
+}
+
+.radioFormPlan {
+  composes: flex--col--fs-stretch from '../../assets/global.css';
+  gap: 12px;
+}
+
+.selectPlanInd {
+  width: 100%;
+}
+
+.selectLabel {
+  display: block;
+  width: 100%;
+}
+
+.inputRadioCheckbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
