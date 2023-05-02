@@ -17,15 +17,44 @@
 
 .selectPlanInd {
   width: 100%;
+  border: solid 1px var(--clr-light-gray-bg);
+  border-radius: 8px;
+  padding: 14px 16px 18px;
+  cursor: pointer;
+}
+
+.selectPlanInd:hover,
+.selectPlanInd:active {
+  border: solid 1px var(--clr-purplish-blue-bg);
+}
+
+.activePlan {
+  background: var(--clr-alabaster-bg);
+  border: solid 1px var(--clr-purplish-blue-bg);
 }
 
 .selectLabel {
   display: block;
   width: 100%;
+  cursor: pointer;
 }
 
 .inputRadioCheckbox {
+  position: absolute;
+  left: -9999px;
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+.infoPlan {
+  composes: flex--row--fs-fs from '../../assets/global.css';
+
+  gap: 14px;
+}
+
+.spanGroup {
+  composes: flex--col--fs-fs from '../../assets/global.css';
+
+  gap: 4px;
 }

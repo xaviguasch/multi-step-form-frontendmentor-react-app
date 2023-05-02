@@ -34,7 +34,11 @@ const SelectPlan = () => {
 
       <form className={classes.form}>
         <div className={classes.radioFormPlan}>
-          <div className={classes.selectPlanInd}>
+          <div
+            className={`${classes.selectPlanInd} ${
+              plan === 'arcade' && classes.activePlan
+            }`}
+          >
             <label htmlFor='arcade' className={classes.selectLabel}>
               <input
                 type='radio'
@@ -47,16 +51,26 @@ const SelectPlan = () => {
                   setPlan(e.target.value)
                 }}
               />
-              <IconArcadeSVG />
-              <div className={classes.spanGroup}>
-                <span>{PLANS.arcade.name}</span>
-                <span>{monthlyOrYearly === 'monthly' ? '$9/mo' : '$90/yr'}</span>
-                {monthlyOrYearly === 'yearly' && <span>2 months free</span>}
+              <div className={classes.infoPlan}>
+                <IconArcadeSVG />
+                <div className={classes.spanGroup}>
+                  <span className='text-item'>{PLANS.arcade.name}</span>
+                  <span className='text-sub-item'>
+                    {monthlyOrYearly === 'monthly' ? '$9/mo' : '$90/yr'}
+                  </span>
+                  {monthlyOrYearly === 'yearly' && (
+                    <span className='text-sub-sub-item'>2 months free</span>
+                  )}
+                </div>
               </div>
             </label>
           </div>
 
-          <div className={classes.selectPlanInd}>
+          <div
+            className={`${classes.selectPlanInd} ${
+              plan === 'advanced' && classes.activePlan
+            }`}
+          >
             <label htmlFor='advanced' className={classes.selectLabel}>
               <input
                 type='radio'
@@ -69,16 +83,24 @@ const SelectPlan = () => {
                   setPlan(e.target.value)
                 }}
               />
-              <IconAdvancedSVG />
-              <div className={classes.spanGroup}>
-                <span>{PLANS.advanced.name}</span>
-                <span>{monthlyOrYearly === 'monthly' ? '$12/mo' : '$120/yr'}</span>
-                {monthlyOrYearly === 'yearly' && <span>2 months free</span>}
+              <div className={classes.infoPlan}>
+                <IconAdvancedSVG />
+                <div className={classes.spanGroup}>
+                  <span className='text-item'>{PLANS.advanced.name}</span>
+                  <span className='text-sub-item'>
+                    {monthlyOrYearly === 'monthly' ? '$12/mo' : '$120/yr'}
+                  </span>
+                  {monthlyOrYearly === 'yearly' && (
+                    <span className='text-sub-sub-item'>2 months free</span>
+                  )}
+                </div>
               </div>
             </label>
           </div>
 
-          <div className={classes.selectPlanInd}>
+          <div
+            className={`${classes.selectPlanInd} ${plan === 'pro' && classes.activePlan}`}
+          >
             <label htmlFor='pro' className={classes.selectLabel}>
               <input
                 type='radio'
@@ -91,12 +113,18 @@ const SelectPlan = () => {
                   setPlan(e.target.value)
                 }}
               />
-              <IconProSVG />
+              <div className={classes.infoPlan}>
+                <IconProSVG />
 
-              <div className={classes.spanGroup}>
-                <span>{PLANS.pro.name}</span>
-                <span>{monthlyOrYearly === 'monthly' ? '$15/mo' : '$150/yr'}</span>
-                {monthlyOrYearly === 'yearly' && <span>2 months free</span>}
+                <div className={classes.spanGroup}>
+                  <span className='text-item'>{PLANS.pro.name}</span>
+                  <span className='text-sub-item'>
+                    {monthlyOrYearly === 'monthly' ? '$15/mo' : '$150/yr'}
+                  </span>
+                  {monthlyOrYearly === 'yearly' && (
+                    <span className='text-sub-sub-item'>2 months free</span>
+                  )}
+                </div>
               </div>
             </label>
           </div>

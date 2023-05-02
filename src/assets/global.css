@@ -26,6 +26,20 @@
   align-items: center;
 }
 
+.flex--row--fs-c {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex--row--fs-fs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 /* .redTest {
   color: red;
 } */
