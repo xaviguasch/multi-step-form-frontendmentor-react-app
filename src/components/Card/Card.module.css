@@ -9,4 +9,20 @@
     -0.6px 9.4px 13px -0.8px hsl(var(--clr-shadow-color) / 0.45);
 }
 
-/* composes: blueClass from '../../index.css'; */
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Laptop */
+@media (min-width: 1050px) {
+  .Card {
+    box-shadow: unset;
+
+    margin: 56px auto 0;
+    padding: 0;
+
+    border: 1px solid;
+
+    max-width: 450px;
+  }
+}

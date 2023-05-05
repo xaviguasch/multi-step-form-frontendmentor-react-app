@@ -32,3 +32,16 @@
   color: var(--clr-denim-text);
   border: 1px solid var(--clr-light-blue-bg);
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Laptop */
+@media (min-width: 1050px) {
+  .StepsArea {
+    background: url('../../assets/images/bg-sidebar-desktop.svg');
+
+    height: 100%;
+  }
+}

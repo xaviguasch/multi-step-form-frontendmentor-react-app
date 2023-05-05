@@ -16,15 +16,37 @@
   .Container {
     /* test */
     background: var(--clr-white-bg);
-    height: unset;
 
     width: 940px;
     height: 600px;
 
-    border-radius: 40px;
+    border-radius: 16px;
+
+    padding: 16px;
 
     box-shadow: 0px 0.4px 0.4px hsl(var(--clr-shadow-color) / 0.36),
       -0.1px 1.8px 1.9px -1.4px hsl(var(--clr-shadow-color) / 0.32),
       -0.6px 7.1px 7.6px -2.9px hsl(var(--clr-shadow-color) / 0.29);
+
+    display: grid;
+    grid-template-areas:
+      'steps card'
+      'steps navBtns';
+    grid-template-rows: auto;
+    grid-template-columns: 30% 1fr;
+  }
+
+  .stepsWrapper {
+    grid-area: steps;
+  }
+
+  .cardContainer {
+    grid-area: card;
+
+    margin-top: unset;
+  }
+
+  .navigationBtnsWrapper {
+    grid-area: navBtns;
   }
 }
