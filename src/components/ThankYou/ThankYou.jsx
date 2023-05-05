@@ -7,12 +7,15 @@ import { ReactComponent as IconThankYouSVG } from '../../assets/images/icon-than
 const ThankYou = () => {
   return (
     <div className={classes.ThankYou}>
-      <IconThankYouSVG />
-      <h1 className='title'>Thank you!</h1>
-      <p>
-        Thanks for confirming your subscription! We hope you have fun using our platform.
-        If you ever need support, please feel free to email us at support@loremgaming.com.
-      </p>
+      <IconThankYouSVG className={classes.icon} />
+      <div className={classes.copy}>
+        <h1 className='title'>Thank you!</h1>
+        <p className='text'>
+          Thanks for confirming your subscription! We hope you have fun using our
+          platform. If you ever need support, please feel free to email us at
+          support@loremgaming.com.
+        </p>
+      </div>
     </div>
   )
 }

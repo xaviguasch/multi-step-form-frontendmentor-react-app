@@ -1,0 +1,15 @@
+.ThankYou {
+  composes: flex--col--fs-c from '../../assets/global.css';
+  gap: 16px;
+  padding: 50px 0;
+}
+
+.copy {
+  composes: flex--col--fs-c from '../../assets/global.css';
+  gap: 8px;
+  text-align: center;
+}
+
+.icon {
+  width: 56px;
+}
