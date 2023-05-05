@@ -11,3 +11,14 @@
 .buttonsArea {
   composes: flex--row--sb-c from '../../assets/global.css';
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Laptop */
+@media (min-width: 1050px) {
+  .NavigationBtns {
+    position: unset;
+  }
+}
