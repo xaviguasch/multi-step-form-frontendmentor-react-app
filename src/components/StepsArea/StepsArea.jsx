@@ -32,7 +32,7 @@ const StepsArea = () => {
             </span>
             <div className={classes.stepGroup}>
               <span className={classes.stepOrder}>Step 2</span>
-              <h2 className={classes.stepName}>Your Info</h2>
+              <h2 className={classes.stepName}>Select Plan</h2>
             </div>
           </div>
         </li>
@@ -45,7 +45,7 @@ const StepsArea = () => {
             </span>
             <div className={classes.stepGroup}>
               <span className={classes.stepOrder}>Step 3</span>
-              <h2 className={classes.stepName}>Your Info</h2>
+              <h2 className={classes.stepName}>Add-Ons</h2>
             </div>
           </div>
         </li>
@@ -60,7 +60,7 @@ const StepsArea = () => {
             </span>{' '}
             <div className={classes.stepGroup}>
               <span className={classes.stepOrder}>Step 4</span>
-              <h2 className={classes.stepName}>Your Info</h2>
+              <h2 className={classes.stepName}>Summary</h2>
             </div>
           </div>
         </li>

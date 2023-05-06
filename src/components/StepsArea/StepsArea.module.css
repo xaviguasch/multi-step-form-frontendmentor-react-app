@@ -9,13 +9,28 @@
 }
 
 .stepsList {
-  composes: flex--row--c-c from '../../assets/global.css';
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
 }
 
 .stepGroup {
   display: none;
+}
+
+.stepOrder {
+  text-transform: uppercase;
+  color: var(--clr-light-blue-bg);
+  font-size: var(--fs-12);
+}
+
+.stepName {
+  text-transform: uppercase;
+  color: var(--clr-white-text);
+  letter-spacing: 1px;
+  font-size: var(--fs-14);
 }
 
 .number {
@@ -29,7 +44,7 @@
 
 .numSelected {
   background-color: var(--clr-light-blue-bg);
-  color: var(--clr-denim-text);
+  color: var(--clr-denim-text) !important;
   border: 1px solid var(--clr-light-blue-bg);
 }
 
@@ -45,5 +60,37 @@
     background-size: cover;
 
     height: 100%;
+
+    padding: 40px 32px 0;
+  }
+
+  .stepsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 16px;
+  }
+
+  .stepGroup {
+    display: block;
+  }
+
+  .stepItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .number {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-14);
+    color: var(--clr-white-bg);
+    padding: 8px 14px;
+    border: 1px solid var(--clr-white-bg);
+    border-radius: 50%;
   }
 }
