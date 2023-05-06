@@ -160,11 +160,6 @@ ul {
   color: var(--clr-purplish-blue-bg);
 }
 
-.input-label {
-  font-size: var(--fs-12);
-  color: var(--clr-denim-text);
-}
-
 /* ================== */
 /* Links */
 /* ================== */
@@ -172,6 +167,11 @@ ul {
 /* ================== */
 /* Buttons & inputs */
 /* ================== */
+
+.input-label {
+  font-size: var(--fs-12);
+  color: var(--clr-denim-text);
+}
 
 .inputGroup {
   display: flex;
@@ -220,5 +220,21 @@ ul {
   body,
   #root {
     height: 100%;
+  }
+
+  /* Typography */
+
+  .title {
+    font-size: var(--fs-32);
+  }
+
+  .input-label {
+    font-size: var(--fs-14);
+  }
+
+  .input-strd {
+    font-size: var(--fs-16);
+
+    padding: 12px 16px;
   }
 }

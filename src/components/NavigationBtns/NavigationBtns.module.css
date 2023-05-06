@@ -20,5 +20,8 @@
 @media (min-width: 1050px) {
   .NavigationBtns {
     position: unset;
+
+    max-width: 450px;
+    margin: 0 auto;
   }
 }

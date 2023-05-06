@@ -17,8 +17,8 @@
     /* test */
     background: var(--clr-white-bg);
 
-    width: 940px;
-    height: 600px;
+    width: 975px;
+    height: 620px;
 
     border-radius: 16px;
 
@@ -48,5 +48,6 @@
 
   .navigationBtnsWrapper {
     grid-area: navBtns;
+    align-self: end;
   }
 }

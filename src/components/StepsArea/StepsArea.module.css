@@ -41,6 +41,8 @@
 @media (min-width: 1050px) {
   .StepsArea {
     background: url('../../assets/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     height: 100%;
   }
