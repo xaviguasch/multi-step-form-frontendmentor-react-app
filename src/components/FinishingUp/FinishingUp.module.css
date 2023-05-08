@@ -1,5 +1,9 @@
 .FinishingUp {
-  composes: flex--col--fs-fs from '../../assets/global.css';
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
   gap: 22px;
 }
 
@@ -35,4 +39,15 @@
 
 .hrLine {
   border-top: 1px solid var(--clr-grey-hr);
+}
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Laptop */
+@media (min-width: 1050px) {
+  .FinishingUp {
+    gap: 40px;
+  }
 }

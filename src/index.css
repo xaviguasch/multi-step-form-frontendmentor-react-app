@@ -75,6 +75,7 @@
   /* Others */
   --clr-denim-bg: hsla(213, 96%, 18%, 1);
   --clr-purplish-blue-bg: hsl(243, 100%, 62%);
+  --clr-more-purplish-blue-bg: hsla(243, 100%, 77%, 1);
   --clr-pastel-blue-bg: hsl(228, 100%, 84%);
   --clr-light-blue-bg: hsl(206, 94%, 87%);
   --clr-strawberry-red-bg: hsl(354, 84%, 57%);
@@ -240,6 +241,10 @@ ul {
 
   .text-sub-sub-item-price {
     font-size: var(--fs-15);
+  }
+
+  .text-item-total {
+    font-size: var(--fs-20s);
   }
 
   .input-label {
