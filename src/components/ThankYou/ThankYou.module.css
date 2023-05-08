@@ -13,3 +13,20 @@
 .icon {
   width: 56px;
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Laptop */
+@media (min-width: 1050px) {
+  .ThankYou {
+    gap: 32px;
+    padding: 0;
+    margin-top: 124px;
+  }
+
+  .copy {
+    gap: 16px;
+  }
+}
