@@ -47,3 +47,14 @@
 .customCheckbox {
   transform: scale(1.6);
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Laptop */
+@media (min-width: 1050px) {
+  .PickAddOns {
+    gap: 40px;
+  }
+}

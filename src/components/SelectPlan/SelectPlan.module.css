@@ -11,7 +11,11 @@
 }
 
 .radioFormPlan {
-  composes: flex--col--fs-stretch from '../../assets/global.css';
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
   gap: 12px;
 }
 
@@ -48,7 +52,10 @@
 }
 
 .infoPlan {
-  composes: flex--row--fs-fs from '../../assets/global.css';
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   gap: 14px;
 }
