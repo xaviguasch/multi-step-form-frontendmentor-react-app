@@ -35,6 +35,13 @@
 .changeBtn {
   font-size: var(--fs-14);
   border-bottom: 1px solid;
+  cursor: pointer;
+}
+
+.changeBtn:hover,
+.changeBtn:focus,
+.changeBtn:active {
+  color: var(--clr-purplish-blue-bg);
 }
 
 .hrLine {
