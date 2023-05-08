@@ -57,4 +57,16 @@
   .PickAddOns {
     gap: 40px;
   }
+
+  .addOns {
+    width: 100%;
+    border: solid 1px var(--clr-light-gray-bg);
+    border-radius: 8px;
+    padding: 16px 24px;
+    cursor: pointer;
+  }
+
+  .leftAddOn {
+    gap: 24px;
+  }
 }
