@@ -46,6 +46,13 @@
   align-items: flex-start;
 }
 
+.flex--row--stretch-stretch {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
 /* .redTest {
   color: red;
 } */

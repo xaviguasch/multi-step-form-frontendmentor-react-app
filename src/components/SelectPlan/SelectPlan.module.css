@@ -58,3 +58,39 @@
 
   gap: 4px;
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Laptop */
+@media (min-width: 1050px) {
+  .SelectPlan {
+    gap: 40px;
+  }
+
+  .form {
+    gap: 32px;
+  }
+
+  .radioFormPlan {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+
+    gap: 18px;
+  }
+
+  .selectPlanInd {
+    padding: 32px 16px 16px;
+  }
+
+  .infoPlan {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 40px;
+  }
+}
