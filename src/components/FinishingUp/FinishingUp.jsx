@@ -11,7 +11,7 @@ const FinishingUp = () => {
 
   let typeOfPlan = ''
   let currPrice = ''
-  if (planData.monthlyOrYearly === 'monthly') {
+  if (planData.monthlyOrYearly) {
     typeOfPlan = 'mo'
     currPrice = PLANS[planData.plan].price.month
   } else {
@@ -46,7 +46,7 @@ const FinishingUp = () => {
             <div className={classes.itemPair}>
               <span className='text-item-add'>
                 {planData.plan[0].toUpperCase() + planData.plan.slice(1)} (
-                {planData.monthlyOrYearly})
+                {planData.monthlyOrYearly ? 'Monthly' : 'Yearly'})
               </span>
               <span className={classes.changeBtn} onClick={() => setCurrPage(2)}>
                 Change

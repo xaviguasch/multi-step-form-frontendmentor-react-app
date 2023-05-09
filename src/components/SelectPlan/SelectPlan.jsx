@@ -13,9 +13,11 @@ import { ReactComponent as IconProSVG } from '../../assets/images/icon-pro.svg'
 const SelectPlan = () => {
   const { planData, setPlanData } = useContext(MultiContext)
 
+  console.log(planData)
+
   const [plan, setPlan] = useState(planData.plan || 'arcade')
   const [monthlyOrYearly, setMonthlyOrYearly] = useState(
-    planData.monthlyOrYearly || 'monthly'
+    planData.monthlyOrYearly || false
   )
 
   useEffect(() => {
@@ -56,9 +58,9 @@ const SelectPlan = () => {
                 <div className={classes.spanGroup}>
                   <span className='text-item'>{PLANS.arcade.name}</span>
                   <span className='text-sub-item'>
-                    {monthlyOrYearly === 'monthly' ? '$9/mo' : '$90/yr'}
+                    {monthlyOrYearly ? '$9/mo' : '$90/yr'}
                   </span>
-                  {monthlyOrYearly === 'yearly' && (
+                  {!monthlyOrYearly && (
                     <span className='text-sub-sub-item'>2 months free</span>
                   )}
                 </div>
@@ -88,9 +90,9 @@ const SelectPlan = () => {
                 <div className={classes.spanGroup}>
                   <span className='text-item'>{PLANS.advanced.name}</span>
                   <span className='text-sub-item'>
-                    {monthlyOrYearly === 'monthly' ? '$12/mo' : '$120/yr'}
+                    {monthlyOrYearly ? '$12/mo' : '$120/yr'}
                   </span>
-                  {monthlyOrYearly === 'yearly' && (
+                  {!monthlyOrYearly && (
                     <span className='text-sub-sub-item'>2 months free</span>
                   )}
                 </div>
@@ -119,9 +121,9 @@ const SelectPlan = () => {
                 <div className={classes.spanGroup}>
                   <span className='text-item'>{PLANS.pro.name}</span>
                   <span className='text-sub-item'>
-                    {monthlyOrYearly === 'monthly' ? '$15/mo' : '$150/yr'}
+                    {monthlyOrYearly ? '$15/mo' : '$150/yr'}
                   </span>
-                  {monthlyOrYearly === 'yearly' && (
+                  {!monthlyOrYearly && (
                     <span className='text-sub-sub-item'>2 months free</span>
                   )}
                 </div>
@@ -132,29 +134,14 @@ const SelectPlan = () => {
 
         <div className={classes.radioFormTime}>
           <input
-            type='radio'
-            name='monthly-or-yearly'
-            id='monthly-sub'
-            value='monthly'
-            checked={monthlyOrYearly === 'monthly'}
+            type='checkbox'
+            id='monthly-or-yearly'
+            checked={monthlyOrYearly}
             onChange={(event) => {
-              setMonthlyOrYearly(event.target.value)
+              setMonthlyOrYearly(event.target.checked)
             }}
           />
-          <label htmlFor='monthly-sub'>Monthly</label>
-          <br />
-
-          <input
-            type='radio'
-            name='monthly-or-yearly'
-            id='yearly-sub'
-            value='yearly'
-            checked={monthlyOrYearly === 'yearly'}
-            onChange={(event) => {
-              setMonthlyOrYearly(event.target.value)
-            }}
-          />
-          <label htmlFor='yearly-sub'>Yearly</label>
+          <label htmlFor='monthly-or-yearly'>Monthly</label>
         </div>
       </form>
     </div>
