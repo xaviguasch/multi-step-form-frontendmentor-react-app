@@ -10,6 +10,10 @@ const NavigationBtns = () => {
   const { currPage, setCurrPage } = useContext(MultiContext)
 
   const goForwardHandler = () => {
+    if (currPage === 1) {
+      console.log('apply form validation for Personal info')
+    }
+
     if (currPage < 5) {
       setCurrPage((prevPage) => prevPage + 1)
     }

@@ -197,6 +197,19 @@ ul {
   color: var(--clr-grey-text);
 }
 
+.error-message {
+  color: red;
+  display: none;
+}
+
+.input-strd:invalid[focused='true'] {
+  border: 1px solid red;
+}
+
+.input-strd:invalid[focused='true'] ~ .error-message {
+  display: block;
+}
+
 /* ================== */
 /* Utility styles */
 /* ================== */

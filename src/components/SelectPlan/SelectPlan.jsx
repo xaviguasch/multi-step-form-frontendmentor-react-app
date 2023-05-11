@@ -13,12 +13,17 @@ import { ReactComponent as IconProSVG } from '../../assets/images/icon-pro.svg'
 const SelectPlan = () => {
   const { planData, setPlanData } = useContext(MultiContext)
 
-  console.log(planData)
-
   const [plan, setPlan] = useState(planData.plan || 'arcade')
-  const [monthlyOrYearly, setMonthlyOrYearly] = useState(
-    planData.monthlyOrYearly || false
-  )
+  const [monthlyOrYearly, setMonthlyOrYearly] = useState(planData.monthlyOrYearly ?? true)
+
+  // Consider refactoring state by using local variables and not having local state
+
+  // const { planData, setPlanData } = useContext(MultiContext)
+  // const plan = planData.plan || 'arcade';
+
+  // onPlanChange(event){
+  //   setPlanData({...planData, plan:event.target.value});
+  // }
 
   useEffect(() => {
     setPlanData({

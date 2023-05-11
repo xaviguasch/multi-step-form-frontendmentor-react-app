@@ -11,6 +11,16 @@ const PersonalInfo = () => {
   const [email, setEmail] = useState(personalInfoData.email || '')
   const [phoneNumber, setPhoneNumber] = useState(personalInfoData.phoneNumber || '')
 
+  const [focused, setFocused] = useState({
+    name: false,
+    email: false,
+    phone: false,
+  })
+
+  const handleFocus = (e) => {
+    setFocused({ ...focused, [e.target.id]: true })
+  }
+
   useEffect(() => {
     setPersonalInfoData({
       name,
@@ -37,8 +47,15 @@ const PersonalInfo = () => {
             id='name'
             placeholder='e.g. Stephen King'
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => {
+              setName(e.target.value)
+            }}
+            required
+            onBlur={handleFocus}
+            onFocus={(e) => setFocused({ ...focused, [e.target.id]: true })}
+            focused={focused.name.toString()}
           />
+          <span className='error-message'>This field is required</span>
         </div>
 
         <div className='inputGroup'>
@@ -52,7 +69,12 @@ const PersonalInfo = () => {
             placeholder='e.g. stephenking@lorem.com'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
+            onBlur={handleFocus}
+            onFocus={(e) => setFocused({ ...focused, [e.target.id]: true })}
+            focused={focused.email.toString()}
           />
+          <span className='error-message'>This field is required</span>
         </div>
 
         <div className='inputGroup'>
@@ -66,7 +88,12 @@ const PersonalInfo = () => {
             placeholder='e.g. +1 234 567 890'
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
+            required
+            onBlur={handleFocus}
+            onFocus={(e) => setFocused({ ...focused, [e.target.id]: true })}
+            focused={focused.phone.toString()}
           />
+          <span className='error-message'>This field is required</span>
         </div>
       </form>
     </div>
