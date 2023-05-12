@@ -7,11 +7,18 @@ import Button from '../Button/Button'
 import { MultiContext } from '../../context/MultiProvider'
 
 const NavigationBtns = () => {
-  const { currPage, setCurrPage } = useContext(MultiContext)
+  const { currPage, setCurrPage, personalInfoData } = useContext(MultiContext)
+  const [isFWDBtnDisabled, setIsFWDBtnDisabled] = useState(false)
+
+  const { name, email, phoneNumber } = personalInfoData
 
   const goForwardHandler = () => {
     if (currPage === 1) {
-      console.log('apply form validation for Personal info')
+      if (name.length === 0 || email.length === 0 || phoneNumber.length === 0) {
+        setIsFWDBtnDisabled(true)
+      } else {
+        setIsFWDBtnDisabled(false)
+      }
     }
 
     if (currPage < 5) {

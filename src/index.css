@@ -197,6 +197,11 @@ ul {
   color: var(--clr-grey-text);
 }
 
+/* gets rid of the automatic background color when using autocomplete values on the inputs */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--clr-white-bg) inset;
+}
+
 .error-message {
   color: red;
   display: none;
