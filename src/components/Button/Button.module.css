@@ -9,6 +9,10 @@
   cursor: pointer;
 }
 
+.Button:disabled {
+  cursor: not-allowed;
+}
+
 .nextStep {
   color: var(--clr-white-text);
   background: var(--clr-denim-bg);

@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './Button.module.css'
 
-const Button = ({ text, type = 'nextStep', onGoForward, onGoBack }) => {
+const Button = ({ text, type = 'nextStep', onGoForward, onGoBack, disabled }) => {
   let typeClass
 
   if (type === 'nextStep') {
@@ -25,6 +25,7 @@ const Button = ({ text, type = 'nextStep', onGoForward, onGoBack }) => {
     <button
       className={`${classes.Button} ${classes[typeClass]}`}
       onClick={btnClickHandler}
+      disabled={disabled}
     >
       {text}
     </button>
