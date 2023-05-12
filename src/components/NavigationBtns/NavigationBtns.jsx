@@ -11,7 +11,6 @@ const NavigationBtns = () => {
   const [isFWDBtnDisabled, setIsFWDBtnDisabled] = useState(true)
 
   const { name = '', email = '', phoneNumber = '' } = personalInfoData
-  console.log({ name, email, phoneNumber })
 
   useEffect(() => {
     if (currPage === 1) {
@@ -27,10 +26,6 @@ const NavigationBtns = () => {
     if (currPage < 5) {
       setCurrPage((prevPage) => prevPage + 1)
     }
-  }
-
-  if (currPage === 1) {
-    console.log('test')
   }
 
   const goBackHandler = () => {

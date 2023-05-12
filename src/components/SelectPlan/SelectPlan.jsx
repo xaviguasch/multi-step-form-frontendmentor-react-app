@@ -138,15 +138,32 @@ const SelectPlan = () => {
         </div>
 
         <div className={classes.radioFormTime}>
-          <input
-            type='checkbox'
-            id='monthly-or-yearly'
-            checked={monthlyOrYearly}
-            onChange={(event) => {
-              setMonthlyOrYearly(event.target.checked)
-            }}
-          />
-          <label htmlFor='monthly-or-yearly'>Monthly</label>
+          <div className={classes.innerContent}>
+            <span
+              className={`${classes.typeOfPlan} ${monthlyOrYearly ? 'accent' : null}`}
+            >
+              Monthly
+            </span>
+            <div className={classes.inputAndLabel}>
+              <input
+                type='checkbox'
+                id='monthly-or-yearly'
+                className={classes.toggle}
+                checked={monthlyOrYearly}
+                onChange={(event) => {
+                  setMonthlyOrYearly(event.target.checked)
+                }}
+              />
+              <label htmlFor='monthly-or-yearly' className={classes.monthlyToggleLabel}>
+                <div className={classes.ball}></div>
+              </label>
+            </div>
+            <span
+              className={`${classes.typeOfPlan} ${monthlyOrYearly ? null : 'accent'}`}
+            >
+              Yearly
+            </span>
+          </div>
         </div>
       </form>
     </div>
