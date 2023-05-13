@@ -8,16 +8,16 @@ import { PLANS, ADDONS_PRICES } from '../../utils/utils'
 const PickAddOns = () => {
   const { addOnsGlobal, setAddOnsGlobal, planData } = useContext(MultiContext)
 
-  console.log(addOnsGlobal)
-
   // Is this state redundant????? Test if we could get rid of the internal addOns state
   const [addOns, setAddOns] = React.useState(addOnsGlobal)
 
   let typeOfPlan = ''
-  if (planData.monthlyOrYearly === 'monthly') {
+  if (planData.monthlyOrYearly) {
     typeOfPlan = 'mo'
+    console.log('monthly')
   } else {
     typeOfPlan = 'yr'
+    console.log('yearly')
   }
 
   const addOnsList = Object.keys(addOnsGlobal)

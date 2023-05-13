@@ -21,7 +21,6 @@
 }
 
 .nextStep:hover,
-.nextStep:focus,
 .nextStep:active {
   background: var(--clr-more-purplish-blue-bg);
   border: 1px solid var(--clr-more-purplish-blue-bg);
@@ -35,7 +34,6 @@
 }
 
 .prevStep:hover,
-.prevStep:focus,
 .prevStep:active {
   color: var(--clr-denim-text);
 }
