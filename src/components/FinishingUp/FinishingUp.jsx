@@ -76,7 +76,9 @@ const FinishingUp = () => {
         <div className={classes.total}>
           <div className={classes.item}>
             <div className={classes.itemInd}>
-              <span className='text-sub-item'>Total (per month)</span>
+              <span className='text-sub-item'>
+                Total (per {planData.monthlyOrYearly ? 'month' : 'year'})
+              </span>
             </div>
             <span className='text-item-total'>
               +${finalTotal}/{typeOfPlan}

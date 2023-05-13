@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect, useRef } from 'react'
 
 import classes from './PersonalInfo.module.css'
 
@@ -17,11 +17,18 @@ const PersonalInfo = () => {
     phone: false,
   })
 
+  const emailInputRef = React.useRef()
+
   const handleFocus = (e) => {
     setFocused({ ...focused, [e.target.id]: true })
   }
 
   useEffect(() => {
+    // complete email validation via useRef
+    console.log('----------')
+    console.log(emailInputRef.current.value)
+    console.log('----------')
+
     setPersonalInfoData({
       name,
       email,
@@ -73,6 +80,7 @@ const PersonalInfo = () => {
             onBlur={handleFocus}
             onFocus={(e) => setFocused({ ...focused, [e.target.id]: true })}
             focused={focused.email.toString()}
+            ref={emailInputRef}
           />
           <span className='error-message'>This field is required</span>
         </div>
